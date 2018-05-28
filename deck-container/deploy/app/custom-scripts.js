@@ -20,13 +20,18 @@ define(["dojo/topic"], function(topic) {
 
         if(getParameterByName("hideTitle") != null){
             document.getElementById('headerDesktop').style.display='none';
+            var currentHeight = $("body").height()
+            $("#contentPanel").height(currentHeight);
+            $("#mainStagePanelInner").height(currentHeight);
         }
         var activeSection = getParameterByName("activeSection");
         if(activeSection != null){
             activeSection = parseInt(activeSection);
             app.ui.mainStage.updateMainMediaWithStoryMainMedia(activeSection,false)
-            app.ui.navBar.showEntryIndex(activeSection)
-            app.data.setCurrentSectionIndex(activeSection)
+            app.ui.navBar.showEntryIndex(activeSection);
+            app.ui.descLegendPanel.showEntryIndex(activeSection);
+            app.data.setCurrentSectionIndex(activeSection);
+
         }
 
     });
