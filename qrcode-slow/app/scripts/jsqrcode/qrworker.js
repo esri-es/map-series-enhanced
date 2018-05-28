@@ -25,7 +25,7 @@ self.onmessage = function(e) {
     var height = data.height;
     var result = qrcode.decode(width, height, data);
     postMessage(result);
-  } 
+  }
   catch(e) {
     postMessage(undefined);
   }
