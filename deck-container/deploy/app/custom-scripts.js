@@ -27,11 +27,7 @@ define(["dojo/topic"], function(topic) {
         var activeSection = getParameterByName("activeSection");
         if(activeSection != null){
             activeSection = parseInt(activeSection);
-            app.ui.mainStage.updateMainMediaWithStoryMainMedia(activeSection,false)
-            app.ui.navBar.showEntryIndex(activeSection);
-            app.ui.descLegendPanel.showEntryIndex(activeSection);
-            app.data.setCurrentSectionIndex(activeSection);
-
+            $(`.entry:nth-child(${activeSection})`).click();
         }
 
     });
