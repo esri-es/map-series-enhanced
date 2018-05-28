@@ -79,6 +79,7 @@ html {
 
   // the user can resize this using THE ALMIGHTY POWER OF CSS alone
   var sizer = document.querySelector('.sizer');
+  var sizer_w = sizer.offsetWidth;
 
   document.querySelector('.set-size').addEventListener('click', function(event) {
     // get all the paragraphs
@@ -92,7 +93,7 @@ html {
     if (goSlow) {
       while (i--) {
         // looking at the sizer's offsetWidth on each loop - this is the slow bit
-        ps[i].style.width = sizer.offsetWidth + 'px';
+        ps[i].style.width = sizer_w + 'px';
       }
     }
     else {
