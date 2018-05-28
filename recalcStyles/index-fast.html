@@ -24,7 +24,7 @@
       will-change: transform;
     }
 
-    body.toggled main .box-container .box:nth-child(2n) {
+    .box.gray{
       background: #777 !important;
     }
 
@@ -67,7 +67,13 @@
 
     function styleSwapper() {
       console.log("start: " + window.performance.now());
-      document.body.classList.toggle('toggled');
+      container.classList.toggle('toggled');
+      var boxes = container.querySelectorAll('.box');
+      var t = container.classList.contains('toggled')
+      for (var i = 1; i < boxes.length; i+=2){
+          boxes[i].classList.toggle('gray', t);
+      }
+
       // DO NOT REMOVE THIS LINE (or the test will automatically pass)
       // it forces the browser to wait until the recalc event ends before finishing the function
       window.getComputedStyle(document.querySelector('div')).backgroundColor;
