@@ -1,6 +1,9 @@
 # Browser Rendering Optimization course
 
-Live preview: [slides](https://slides.com/hhkaos/browser-rendering/) | [demos](https://hhkaos.github.io/browser-rendering-optimization-course/deck-container/deploy/index.html?appid=1f4c516587654dee9edd3061d71d9078)
+Links:
+
+* Live preview: [slides](https://slides.com/hhkaos/browser-rendering/) | [demos](https://hhkaos.github.io/browser-rendering-optimization-course/deck-container/deploy/index.html?appid=1f4c516587654dee9edd3061d71d9078) 
+* Meetup event: [Optimización del rendimiento en navegadores](https://www.meetup.com/es-ES/madridjs/events/250425040/)
 
 [![Screenshot](https://user-images.githubusercontent.com/826965/40623417-44e3642a-62a7-11e8-8217-96c1e3114221.png)](https://slides.com/hhkaos/browser-rendering/)
 
