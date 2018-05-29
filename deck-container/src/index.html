@@ -93,6 +93,8 @@
             #descLegendPanel{
                 border-radius: 0;
                 box-shadow: 1px 0px 6px #bbb;
+                transition: opacity 1s, transform 2s;
+                -webkit-transition: opacity 1s, transform 2s; /* Safari */
             }
             .mediaBackContainer{
                 bottom: 80px;
@@ -104,6 +106,21 @@
                 border-top: 1px solid #428BC9;
                 zoom: .7;
             }
+            #toggleLegend{
+                display: inline-block;
+                float: right;
+            }
+            #toggleLegendBtn{
+                background-color: #0398c1;
+                color: white;
+                padding: .5rem 2rem;
+                border: 1px solid white;
+                min-width: 140px;
+            }
+            #toggleLegendBtn.active{
+                background-color: #004c63;
+            }
+
 		</style>
 
 		<!-- Builder top panel is injected here -->
@@ -151,6 +168,11 @@
 							</tr>
 						</table>
 					</div>
+                    <div id="toggleLegend">
+                        <button id="toggleLegendBtn" class="active">
+                            Hide legend
+                        </button>
+                    </div>
 				</div>
 				<div class="textArea">
 					<h1 class="title" tabindex="0"></h1>
