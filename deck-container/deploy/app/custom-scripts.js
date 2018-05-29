@@ -30,5 +30,19 @@ define(["dojo/topic"], function(topic) {
             $(`.entry:nth-child(${activeSection})`).click();
         }
 
+        $('#toggleLegendBtn').click(function(){
+            var opacity = 1, translate = 0;
+            $(this).toggleClass('active');
+            // $("#descLegendPanel").toggleClass('hide');
+            if(!$(this).hasClass('active')){
+                opacity = 0;
+                translate = 500;
+                $(this).text('Show legend');
+            }else{
+                $(this).text('Hide legend');
+            }
+            $("#descLegendPanel").css("opacity", opacity);
+            $("#descLegendPanel").css("transform",`translate(${translate}px)`);
+        });
     });
 });
