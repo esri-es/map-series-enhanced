@@ -37,9 +37,9 @@ define(["dojo/topic"], function(topic) {
             if(!$(this).hasClass('active')){
                 opacity = 0;
                 translate = 500;
-                $(this).text('Show legend');
+                $(this).text('Show exercises');
             }else{
-                $(this).text('Hide legend');
+                $(this).text('Hide exercises');
             }
             $("#descLegendPanel").css("opacity", opacity);
             $("#descLegendPanel").css("transform",`translate(${translate}px)`);
