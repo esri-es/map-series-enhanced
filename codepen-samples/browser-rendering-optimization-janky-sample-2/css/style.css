@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 5px;
+  font-family: Arial;
+  font-size: 14px;
+}
+
+.left {
+  float: left;
+  width: 30%;
+  padding: 0 10px 0 0;
+  overflow: scroll-y;
+  
+  transition: width 3.2s ease-out;
+}
+
+.control a {
+  padding: 6px 12px;
+  background: linear-gradient(#00B2B2, #0085B2);
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: inline-block;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+.control a:active {
+  background: red;
+}
+
+.author {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 3px 0;
+  color: #222;
+}
+
+.datetime {
+  font-style: italic;
+  font-size: 12px;
+  margin: 0 0 10px 0;
+  color: #888;
+}
+
+.comment {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.comment a {
+  text-decoration: none;
+  background: #f4f4f4;
+  display: block;
+  padding: 8px;
+  color: #666;
+}
+
+.right {
+  float: left;
+  width: 70%;
+  background: white;
+  height: 100%;
+  padding: 30px;
+  
+  transition: width 3.2s ease-out;
+}
+
+.output {
+  font-family: Georgia;
+  font-style: italic;
+  font-size: 50px;
+}
+
+body.wide .left {
+  width: 100%;
+}
+
+body.wide .right {
+  width: 0%;
+  overflow: hidden;
+}
+
+body.wide .output {
+  font-size: 45px;
+}
